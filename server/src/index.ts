@@ -1,7 +1,8 @@
 import express, { Request, Response } from "express";
 import dotenv from "dotenv";
-import user from './routes/userRoutes'
+import userRoutes from './routes/userRoutes'
 import contract from "./routes/contractRoutes"
+
 
 
 dotenv.config();
@@ -9,7 +10,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use('/api', user)
+app.use('/api', userRoutes)
 app.use('/api', contract)
 
 
